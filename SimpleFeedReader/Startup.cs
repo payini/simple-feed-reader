@@ -22,6 +22,7 @@ namespace SimpleFeedReader
             services.AddScoped<NewsService>();
             services.AddAutoMapper();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+			services.AddApplicationInsightsTelemetry();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
